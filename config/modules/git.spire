@@ -1,0 +1,19 @@
+# git.spire - a couple of small git helper functions. The prompt itself can
+# already show the current branch via %g in your `prompt` format string;
+# this module adds a few interactive helpers on top of that.
+
+function gbranch
+  git rev-parse --abbrev-ref HEAD
+end
+
+function gclean
+  if test -n "$(git status --porcelain)"
+    echo "working tree is dirty"
+  else
+    echo "working tree is clean"
+  end
+end
+
+function gundo
+  git reset --soft HEAD~1
+end

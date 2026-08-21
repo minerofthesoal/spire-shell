@@ -1,0 +1,14 @@
+# aliases.spire - a small starter set of quality-of-life aliases.
+# Enable it by adding "aliases" to the `modules = ...` line in
+# ~/.config/spire/spire.conf, or run `module load aliases` at any time.
+
+alias ll='ls -la'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias grep='grep --color=auto'
+alias gs='git status'
+alias gd='git diff'
+alias gc='git commit'
+alias gco='git checkout'
